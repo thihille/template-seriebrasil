@@ -18,10 +18,11 @@ class Template {
   
   createTemplate(){
     let titulo = document.createElement('h1');
-    let botaoStart = document.createElement('button');
+        titulo.setAttribute('class','titulo_oed');
+    let botaoStart = document.createElement('img');
         botaoStart.setAttribute('class','btn-start-oed');
-        botaoStart.innerHTML = "Play";
-    
+        // botaoStart.setAttribute('src','data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQxNS4zNDYgNDE1LjM0NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDE1LjM0NiA0MTUuMzQ2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDEuNzEyLDQxNS4zNDZjLTExLjc2MywwLTIxLjMtOS41MzctMjEuMy0yMS4zVjIxLjI5OUMyMC40MTIsOS41MzYsMjkuOTQ5LDAsNDEuNzEyLDBsMzQ2LjEyMiwxOTEuNjk3ICAgIGMwLDAsMTUuOTc1LDE1Ljk3NSwwLDMxLjk1MUMzNzEuODU5LDIzOS42MjIsNDEuNzEyLDQxNS4zNDYsNDEuNzEyLDQxNS4zNDZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==');
+
     let navOed = document.createElement('div');
         navOed.setAttribute('id','nav-oed');
     
