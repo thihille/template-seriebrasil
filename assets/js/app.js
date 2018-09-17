@@ -272,9 +272,10 @@ class Navegacao {
     this._nPages = 1;
 
     this._producao = document.querySelector('#nav-oed');
+    this._disablePrev = false;
+    this._disableNext = false;
     this.createNav();
 
-    this._disablePrev = false;
   }
   createNav(){
     this._producao.appendChild(this._navSlideAnterior);
@@ -294,13 +295,15 @@ class Navegacao {
           }
           pagina_atual--;
           document.querySelectorAll('.janela-slide')[pagina_atual-1].style.display = 'block';
-          document.querySelector('.nav-proximo').classList.remove('disable');
+          if(!btnProximo.classList.contains('off')) document.querySelector('.nav-proximo').classList.remove('disable');
           if(pagina_atual == 1) document.querySelector('.nav-anterior').classList.add('disable');
         }
       }
     });
     
     this._navSlideProximo.addEventListener('click',function(){
+      
+      
       if(!btnProximo.classList.contains('disable')){
         if(pagina_atual < total_paginas){
           for(let x=0;x<total_paginas;x++){
@@ -309,24 +312,23 @@ class Navegacao {
           document.querySelectorAll('.janela-slide')[pagina_atual].style.display = 'block';
           pagina_atual++;
           
-          document.querySelector('.nav-anterior').classList.remove('disable');
+          if(!btnAnterior.classList.contains('off')) document.querySelector('.nav-anterior').classList.remove('disable');
           if(pagina_atual == total_paginas) document.querySelector('.nav-proximo').classList.add('disable');
         }
       }
     });
   }
   disablePrevious(){
-    this._disablePrev = true;
-    document.querySelector('.nav-anterior').classList.add('disable');
+    document.querySelector('.nav-anterior').classList.add('disable','off');
   }
   disableNext(){
-    document.querySelector('.nav-proximo').classList.add('disable');
+    document.querySelector('.nav-proximo').classList.add('disable','off');
   }
   enablePrevious(){
-    document.querySelector('.nav-anterior').classList.remove('disable');
+    document.querySelector('.nav-anterior').classList.remove('disable','off');
   }
   enableNext(){
-    document.querySelector('.nav-proximo').classList.remove('disable');
+    document.querySelector('.nav-proximo').classList.remove('disable','off');
   }
 }
 let app = new Template();

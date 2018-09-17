@@ -16,12 +16,13 @@ let ObjetoEducacional = ()=> {
       // navOed.disablePrevious();
       // navOed.enableNext();
       // navOed.enablePrevious();
+  
   setTimeout(function(){
-    navOed.disablePrevious();
-  },1000);
+    navOed.disableNext();
+  },2000);
   setTimeout(function(){
-    navOed.disablePrevious();
-  },5000);
+    navOed.enableNext();
+  },3000);
 
     
 
