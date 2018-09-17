@@ -299,9 +299,7 @@ class Navegacao {
         }
       }
     });
-    setTimeout(function(){
-      alert(this._disablePrev);
-    },3000);
+    
     this._navSlideProximo.addEventListener('click',function(){
       if(!btnProximo.classList.contains('disable')){
         if(pagina_atual < total_paginas){
