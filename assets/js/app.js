@@ -135,9 +135,9 @@ class Ajuda {
     this._buttonAjuda = document.createElement('img');
       this._buttonAjuda.setAttribute('class','btn-ajuda');
       // this._buttonAjuda.innerHTML = 'Fechar Ajuda';
-    this._buttonAjudaProducao = document.createElement('button');
+    this._buttonAjudaProducao = document.createElement('img');
       this._buttonAjudaProducao.setAttribute('class','btn-ajuda btn-ativo');
-      this._buttonAjudaProducao.innerHTML = 'Ajuda';
+      // this._buttonAjudaProducao.innerHTML = 'Ajuda';
     this._window = document.querySelector('#oed');
     this._producao = document.querySelector('#nav-oed');
     this.createWindow();
@@ -196,9 +196,9 @@ class Creditos {
     this._buttonCreditos = document.createElement('img');
       this._buttonCreditos.setAttribute('class','btn-creditos');
       // this._buttonCreditos.innerHTML = 'Fechar Créditos';
-    this._buttonCreditosProducao = document.createElement('button');
+    this._buttonCreditosProducao = document.createElement('img');
       this._buttonCreditosProducao.setAttribute('class','btn-creditos btn-ativo');
-      this._buttonCreditosProducao.innerHTML = 'Créditos';
+      // this._buttonCreditosProducao.innerHTML = 'Créditos';
     this._window = document.querySelector('#oed');
     this._producao = document.querySelector('#nav-oed');
     this.createWindow();
@@ -258,12 +258,12 @@ class Navegacao {
   constructor(minhaClass){
     this._nav = minhaClass;
     
-    this._navSlideAnterior = document.createElement('button');
+    this._navSlideAnterior = document.createElement('img');
       this._navSlideAnterior.setAttribute('class','nav-anterior disable');
-      this._navSlideAnterior.innerHTML = "Voltar";
-    this._navSlideProximo = document.createElement('button');
+      // this._navSlideAnterior.innerHTML = "Voltar";
+    this._navSlideProximo = document.createElement('img');
       this._navSlideProximo.setAttribute('class','nav-proximo');
-      this._navSlideProximo.innerHTML = "Próximo";
+      // this._navSlideProximo.innerHTML = "Próximo";
 
     this._navSlideAnteriorEnable = false;
     this._navSlideProximoEnable = true;

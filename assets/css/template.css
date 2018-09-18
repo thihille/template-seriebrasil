@@ -95,7 +95,13 @@ body {
     margin-bottom: 16px;
 }
 #nav-oed {
+    width: 257px;
+    height: 87px;
     position: absolute;
+    background-image: url(../img/bg-menu.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    bottom: 0;
 }
 #capa {
     width: 1024px;
