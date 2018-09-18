@@ -49,6 +49,16 @@ body {
     right: 11px;
     cursor: pointer;
 }
+#oed-ajuda .conteudo {
+    max-width: 645px;
+    max-height: 460px;
+    padding: 85px 78px 70px 100px;
+}
+#oed-ajuda .conteudo h3 {
+    font-family: 'BreeSerif-Regular';
+    font-size: 30px;
+    margin-bottom: 16px;
+}
 #oed-creditos {
     width: 645px;
     height: 460px;
@@ -73,6 +83,16 @@ body {
     top: 53px;
     right: 11px;
     cursor: pointer;
+}
+#oed-creditos .conteudo {
+    max-width: 645px;
+    max-height: 460px;
+    padding: 85px 78px 70px 100px;
+}
+#oed-creditos .conteudo h3 {
+    font-family: 'BreeSerif-Regular';
+    font-size: 30px;
+    margin-bottom: 16px;
 }
 #nav-oed {
     position: absolute;
