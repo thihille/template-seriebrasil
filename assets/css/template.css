@@ -25,9 +25,9 @@ body {
     height: 660px;
 }
 #oed-ajuda {
-    width: 650px;
-    height: 400px;
-    background-color: yellowgreen;
+    width: 645px;
+    height: 460px;
+    background-image: url(../img/bg_ajuda.png);
     position: absolute;
     left: 0;
     right: 0;
@@ -40,10 +40,19 @@ body {
 #oed-ajuda.ajuda-oculta {
     transform: translate(0, 100vh);
 }
+#oed-ajuda .btn-ajuda {
+    width: 24px;
+    height: 26px;
+    background: url(../img/fechar.png) no-repeat 100% 100%;
+    position: absolute;
+    top: 53px;
+    right: 11px;
+    cursor: pointer;
+}
 #oed-creditos {
-    width: 650px;
-    height: 400px;
-    background-color: tomato;
+    width: 645px;
+    height: 460px;
+    background-image: url(../img/bg_ajuda.png);
     position: absolute;
     left: 0;
     right: 0;
@@ -55,6 +64,15 @@ body {
 }
 #oed-creditos.creditos-oculto {
     transform: translate(0, 100vh);
+}
+#oed-creditos .btn-creditos {
+    width: 24px;
+    height: 26px;
+    background: url(../img/fechar.png) no-repeat 100% 100%;
+    position: absolute;
+    top: 53px;
+    right: 11px;
+    cursor: pointer;
 }
 #nav-oed {
     position: absolute;
@@ -98,6 +116,7 @@ body {
     position: absolute;
     top: 45%;
     left: 45%;
+    cursor: pointer;
 }
 #capa .materia_oed {
     font-family: 'BreeSerif-Regular';

@@ -132,9 +132,9 @@ class Ajuda {
       this._ajuda.setAttribute('class','ajuda-oculta');
     this._ajudaContainer = document.createElement('div');
       this._ajudaContainer.setAttribute('class','conteudo');
-    this._buttonAjuda = document.createElement('button');
+    this._buttonAjuda = document.createElement('img');
       this._buttonAjuda.setAttribute('class','btn-ajuda');
-      this._buttonAjuda.innerHTML = 'Fechar Ajuda';
+      // this._buttonAjuda.innerHTML = 'Fechar Ajuda';
     this._buttonAjudaProducao = document.createElement('button');
       this._buttonAjudaProducao.setAttribute('class','btn-ajuda btn-ativo');
       this._buttonAjudaProducao.innerHTML = 'Ajuda';
@@ -193,9 +193,9 @@ class Creditos {
       this._creditos.setAttribute('class','creditos-oculto');
     this._creditosContainer = document.createElement('div');
       this._creditosContainer.setAttribute('class','conteudo');
-    this._buttonCreditos = document.createElement('button');
+    this._buttonCreditos = document.createElement('img');
       this._buttonCreditos.setAttribute('class','btn-creditos');
-      this._buttonCreditos.innerHTML = 'Fechar Créditos';
+      // this._buttonCreditos.innerHTML = 'Fechar Créditos';
     this._buttonCreditosProducao = document.createElement('button');
       this._buttonCreditosProducao.setAttribute('class','btn-creditos btn-ativo');
       this._buttonCreditosProducao.innerHTML = 'Créditos';
