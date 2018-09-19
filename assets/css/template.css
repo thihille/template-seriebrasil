@@ -207,6 +207,7 @@ body {
     position: absolute;
     left: 63px;
     top: 143px;
+    text-transform: uppercase;
 }
 #capa .materia-oed h1 {
     font-size: 65px;
