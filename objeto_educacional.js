@@ -17,12 +17,6 @@ let ObjetoEducacional = ()=> {
       // navOed.enableNext();
       // navOed.enablePrevious();
   
-  setTimeout(function(){
-    navOed.disableNext();
-  },2000);
-  setTimeout(function(){
-    navOed.enableNext();
-  },3000);
 
     
 

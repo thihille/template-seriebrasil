@@ -35,10 +35,16 @@ body {
     bottom: 0;
     margin: auto;
     transition: transform 1s ease;
-    transform: translate(0);
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    transform: translate(0) scale(1);
+    -webkit-transform: translate(0) scale(1);
+    -moz-transform: translate(0) scale(1);
 }
 #oed-ajuda.ajuda-oculta {
-    transform: translate(0, 100vh);
+    transform: translate(0, 100vh) scale(.2);
+    -webkit-transform: translate(0, 100vh) scale(.2);
+    -moz-transform: translate(0, 100vh) scale(.2);
 }
 #oed-ajuda .btn-ajuda {
     width: 24px;
@@ -69,11 +75,17 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
-    transition: transform 1s ease;
-    transform: translate(0);
+    transition: transform 1.3s ease;
+    -webkit-transition: transform 1.3s ease;
+    -moz-transition: transform 1.3s ease;
+    transform: translate(0) scale(1);
+    -webkit-transform: translate(0) scale(1);
+    -moz-transform: translate(0) scale(1);
 }
 #oed-creditos.creditos-oculto {
-    transform: translate(0, 100vh);
+    transform: translate(0, 100vh) scale(.2);
+    -webkit-transform: translate(0, 100vh) scale(.2);
+    -moz-transform: translate(0, 100vh) scale(.2);
 }
 #oed-creditos .btn-creditos {
     width: 24px;
@@ -188,7 +200,7 @@ body {
     left: 45%;
     cursor: pointer;
 }
-#capa .materia_oed {
+#capa .materia-oed {
     font-family: 'BreeSerif-Regular';
     color: #fff;
     text-align: center;
@@ -196,14 +208,14 @@ body {
     left: 63px;
     top: 143px;
 }
-#capa .materia_oed h1 {
+#capa .materia-oed h1 {
     font-size: 65px;
     margin-bottom: 5px;
 }
-#capa .materia_oed h2 {
+#capa .materia-oed h2 {
     font-size: 34px;
 }
-#capa .titulo_oed {
+#capa .titulo-oed {
     font-family: 'BreeSerif-Regular';
     font-size: 50px;
     color: #fff;
@@ -211,7 +223,7 @@ body {
     bottom: 130px;
     right: 178px;
 }
-#capa .autores_oed {
+#capa .autores-oed {
     font-family: 'BreeSerif-Regular';
     font-size: 25px;
     color: #fff;
@@ -226,6 +238,26 @@ body {
 }
 #nav-oed .nav-proximo.disable {
     opacity: .5;
+}
+#producao .titulo-oed {
+    font-family: 'BreeSerif-Regular';
+    font-size: 30px;
+    color: #333;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px 50px 17px 120px;
+    background: url(../img/bg-titulo.png) no-repeat right center;
+    margin: 0;
+}
+#producao .titulo-oed::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 75px;
+    height: 80px;
+    background: url(../img/img-titulo.png) no-repeat left top;
 }
 #producao .janela-slide {
     display: none;

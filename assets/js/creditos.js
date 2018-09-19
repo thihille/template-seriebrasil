@@ -26,4 +26,18 @@ const MeusCreditos = [
   {
     "Controle de processos editoriais":"Equipe CPE"
   }
+];
+const AutoresDaColecao = [
+  {
+    nome: "Cibele Lopresti Costa (Coord.)"
+  },
+  {
+    nome: "Aline Evangelista Martins"
+  },
+  {
+    nome: "Angela Kim Arahata"
+  },
+  {
+    nome: "Elenice Rodrigues"
+  }
 ]

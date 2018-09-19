@@ -7,6 +7,7 @@ class Template {
 
     //TemplateJS
     this._titulo = ConfigTemplate.titulo;
+    this._creditosCapa = AutoresDaColecao;
     this._window = document.querySelector('#oed');
     this._producao = document.querySelector('#producao');
     this.createTemplate();
@@ -17,11 +18,27 @@ class Template {
   }
   
   createTemplate(){
+    let materia = document.createElement('div');
+        materia.setAttribute('class','materia-oed');
+
+    let tituloMateria = document.createElement('h1');
+        tituloMateria.innerHTML = "Produção";
+
+    let subTituloMateria = document.createElement('h2');
+        subTituloMateria.innerHTML = "de texto";
+
+    let creditosCapa = document.createElement('div');
+        creditosCapa.setAttribute('class','autores-oed');
+    
+    this._creditosCapa.forEach(function(objeto) {
+      for (let autor in objeto) creditosCapa.innerHTML += '<p>'+objeto[autor]+'</p>';
+    });
+
     let titulo = document.createElement('h1');
-        titulo.setAttribute('class','titulo_oed');
+        titulo.setAttribute('class','titulo-oed');
+
     let botaoStart = document.createElement('div');
         botaoStart.setAttribute('class','btn-start-oed');
-        // botaoStart.setAttribute('src','data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQxNS4zNDYgNDE1LjM0NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDE1LjM0NiA0MTUuMzQ2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDEuNzEyLDQxNS4zNDZjLTExLjc2MywwLTIxLjMtOS41MzctMjEuMy0yMS4zVjIxLjI5OUMyMC40MTIsOS41MzYsMjkuOTQ5LDAsNDEuNzEyLDBsMzQ2LjEyMiwxOTEuNjk3ICAgIGMwLDAsMTUuOTc1LDE1Ljk3NSwwLDMxLjk1MUMzNzEuODU5LDIzOS42MjIsNDEuNzEyLDQxNS4zNDYsNDEuNzEyLDQxNS4zNDZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==');
 
     let navOed = document.createElement('div');
         navOed.setAttribute('id','nav-oed');
@@ -34,18 +51,27 @@ class Template {
     
     titulo.innerHTML = this._titulo;
 
-    let iniciaOed = ()=>{
-      let capa = document.querySelector("#capa");
-          capa.style.display = "none";
-          ObjetoEducacional();
-    }
+    this._window.childNodes[1].appendChild(materia);
+    materia.appendChild(tituloMateria);    
+    materia.appendChild(subTituloMateria);
 
+    this._window.childNodes[1].appendChild(creditosCapa);    
     this._window.childNodes[1].appendChild(titulo);    
     this._window.childNodes[1].appendChild(botaoStart);    
     this._window.childNodes[1].appendChild(logoEbsa);    
     this._window.childNodes[1].appendChild(logoColecao);    
     this._producao.appendChild(navOed);   
+    this._producao.appendChild(titulo);   
     
+    let iniciaOed = ()=>{
+      let capa = document.querySelector("#capa");
+          capa.classList.add("animated","zoomOutLeft");
+          capa.addEventListener("animationend", function() {
+            this.style.display = "none";
+            this.classList.remove("animated","zoomOutLeft");
+          }, false);
+          ObjetoEducacional();
+    }
     botaoStart.addEventListener('click',iniciaOed);
   }
   adjustLargerScreen() {
