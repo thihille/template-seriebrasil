@@ -37,6 +37,9 @@ class Template {
     let titulo = document.createElement('h1');
         titulo.setAttribute('class','titulo-oed');
 
+    let tituloInterno = document.createElement('h1');
+        tituloInterno.setAttribute('class','titulo-oed');
+
     let botaoStart = document.createElement('div');
         botaoStart.setAttribute('class','btn-start-oed');
 
@@ -50,6 +53,7 @@ class Template {
         logoColecao.setAttribute('class','logo-colecao');
     
     titulo.innerHTML = this._titulo;
+    tituloInterno.innerHTML = this._titulo;
 
     this._window.childNodes[1].appendChild(materia);
     materia.appendChild(tituloMateria);    
@@ -61,7 +65,7 @@ class Template {
     this._window.childNodes[1].appendChild(logoEbsa);    
     this._window.childNodes[1].appendChild(logoColecao);    
     this._producao.appendChild(navOed);   
-    this._producao.appendChild(titulo);   
+    this._producao.appendChild(tituloInterno);   
     
     let iniciaOed = ()=>{
       let capa = document.querySelector("#capa");
