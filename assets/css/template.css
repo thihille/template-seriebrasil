@@ -470,4 +470,26 @@ body {
     #producao {
         display: block;
     }
+    #producao .titulo-oed {
+        font-family: 'BreeSerif-Regular';
+        font-size: 18px;
+        color: #333;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 4px 22px 7px 50px;
+        background: url(../img/bg-titulo.png) no-repeat right center;
+        margin: 0;
+        background-size: 220%;
+    }
+    #producao .titulo-oed::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 75px;
+        height: 42px;
+        background: url(../img/img-titulo.png) no-repeat left top;
+        background-size: 51%;
+    }
 }
