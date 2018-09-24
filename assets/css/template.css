@@ -78,7 +78,7 @@ body {
 #oed-ajuda .conteudo .conteudo-ajuda {
     display: block;
     height: 100%;
-    overflow: scroll;
+    overflow: scroll hidden;
 }
 #oed-creditos {
     width: 645px;
@@ -126,7 +126,7 @@ body {
 #oed-creditos .conteudo .conteudo-ajuda {
     display: block;
     height: 100%;
-    overflow: scroll;
+    overflow: scroll hidden;
 }
 #oed-creditos .conteudo .conteudo-ajuda p span.titulo_credito {
     display: block;
@@ -524,13 +524,13 @@ body {
     #oed.mobile-service #oed-creditos {
         display: block;
         width: 85vw;
-        height: 68vh;
+        height: 60vh;
         background: url(../img/bg-ajuda-creditos.png) no-repeat right bottom;
         background-size: cover;
         position: absolute;
         left: 2px;
         right: 0;
-        top: -10%;
+        top: -5%;
         bottom: 0;
         margin: auto;
         transition: transform .5s ease;
@@ -558,7 +558,7 @@ body {
     #oed.mobile-service #oed-creditos .conteudo {
         position: relative;
         height: calc(100% - 50px);
-        padding: 15px 15px 5px 15px;
+        padding: 15px 18px 5px 15px;
     }
     #oed.mobile-service #oed-creditos .conteudo h3 {
         font-family: 'BreeSerif-Regular';
@@ -568,7 +568,7 @@ body {
     #oed.mobile-service #oed-creditos .conteudo .conteudo-ajuda {
         display: block;
         height: calc(100% - 50px);
-        overflow: scroll;
+        overflow: scroll hidden;
     }
     #oed.mobile-service #oed-creditos .conteudo-ajuda p {
         font-size: .8em;
@@ -598,13 +598,13 @@ body {
     #oed.mobile-service #oed-ajuda {
         display: block;
         width: 85vw;
-        height: 68vh;
+        height: 60vh;
         background: url(../img/bg-ajuda-creditos.png) no-repeat right bottom;
         background-size: cover;
         position: absolute;
         left: 2px;
         right: 0;
-        top: -10%;
+        top: -5%;
         bottom: 0;
         margin: auto;
         transition: transform .5s ease;
@@ -632,7 +632,7 @@ body {
     #oed.mobile-service #oed-ajuda .conteudo {
         position: relative;
         height: calc(100% - 50px);
-        padding: 15px 15px 5px 15px;
+        padding: 15px 18px 5px 15px;
     }
     #oed.mobile-service #oed-ajuda .conteudo h3 {
         font-family: 'BreeSerif-Regular';
@@ -642,7 +642,7 @@ body {
     #oed.mobile-service #oed-ajuda .conteudo .conteudo-ajuda {
         display: block;
         height: calc(100% - 50px);
-        overflow: scroll;
+        overflow: scroll hidden;
     }
     #oed.mobile-service #oed-ajuda .conteudo-ajuda p {
         font-size: .8em;
