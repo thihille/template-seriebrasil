@@ -1,28 +1,19 @@
 let ObjetoEducacional = ()=> {
 //Start code OED  
 
-  let estruturaAjuda = `
-  <h2>Instrucões:</h2>
-  <p>
-    Descrição da instruções do <strong>Objeto Educacional</strong>.<br/>
-    Pode inserir <u>html</u> para variar as intruções de cada OED.
-  </p>
-  `;
-  let ajudaOed = new Ajuda();
-      ajudaOed.data('Titulo',estruturaAjuda);
+  // CONFIG DE NAVEGAÇÃO DO TEMPLATE
 
-  let navOed = new Navegacao('slide');
-      // navOed.disableNext();
-      // navOed.disablePrevious();
-      // navOed.enableNext();
-      // navOed.enablePrevious();
+  // oedAjuda.data('Ajuda','texto da ajuda');
+  // navegacaoOed.desabilitarAnterior();
+  // navegacaoOed.desabilitarProximo();
+  // navegacaoOed.habilitarAnterior();
+  // navegacaoOed.habilitarProximo();
   
 
-    
+  
 
 
 
 
-
-//End code OED
+  //End code OED
 }

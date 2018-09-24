@@ -198,7 +198,7 @@ class Ajuda {
         janela.classList.add('ajuda-aberta');
       }
     }
-
+    this.data();
     setTimeout(function(){
       let botoesAjuda = document.querySelectorAll('.btn-ajuda');
       botoesAjuda.forEach(function(btn){
@@ -207,12 +207,30 @@ class Ajuda {
     },200);
   }
   data(titulo,html){
-    let layout = `
-      <h3>${titulo}</h3>
-      <div class="conteudo-ajuda">
-        ${html}
-      </div>
-    `;
+    let layout;
+    if(titulo && html){
+      layout = `
+        <h3>${titulo}</h3>
+        <div class="conteudo-ajuda">
+          ${html}
+        </div>
+      `;
+    }else{
+      layout = `
+        <h3>Ajuda</h3>
+        <div class="conteudo-ajuda">
+          <p style="padding:10px 0;">
+            <img src="./assets/img/ajuda-avancar.png" width="auto" height="30" alt="Botao de navegação - Avançar" /> Avançar para a próxima tela.<br/>
+          </p>
+          <p style="padding:10px 0;">
+            <img src="./assets/img/ajuda-voltar.png" width="auto" height="30" alt="Botao de navegação - Voltar" /> Retornar à tela anterior.<br/>
+          </p>
+          <p style="padding:10px 0;">
+            <img src="./assets/img/ajuda-fechar.png" width="auto" height="30" alt="Botao de navegação - Voltar" /> Ocultar caixa de texto.<br/>
+          </p>
+        </div>
+      `;
+    }
     this._ajudaContainer.innerHTML = layout;
   }
   verificaCreditos(){
@@ -358,17 +376,19 @@ class Navegacao {
       }
     });
   }
-  disablePrevious(){
+  desabilitarAnterior(){
     document.querySelector('.nav-anterior').classList.add('disable','off');
   }
-  disableNext(){
+  desabilitarProximo(){
     document.querySelector('.nav-proximo').classList.add('disable','off');
   }
-  enablePrevious(){
+  habilitarAnterior(){
     document.querySelector('.nav-anterior').classList.remove('disable','off');
   }
-  enableNext(){
+  habilitarProximo(){
     document.querySelector('.nav-proximo').classList.remove('disable','off');
   }
 }
 let app = new Template();
+let oedAjuda = new Ajuda();
+let navegacaoOed = new Navegacao('slide');
