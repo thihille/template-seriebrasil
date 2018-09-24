@@ -10,9 +10,10 @@ class Template {
     this._creditosCapa = AutoresDaColecao;
     this._window = document.querySelector('#oed');
     this._producao = document.querySelector('#producao');
+    
     this.createTemplate();
     this._selectDevice = this.selectDevice();
-
+    
     window.onresize = ()=> this.selectDevice();
     new Creditos();
   }
@@ -80,6 +81,9 @@ class Template {
   }
   adjustLargerScreen() {
     let elemento = this._window;
+
+    let getOed = document.querySelector("#oed");
+    if(getOed.classList.contains('mobile-service')) getOed.classList.remove('mobile-service');
   
     let larguraJanela = window.innerWidth;
     let alturaJanela = window.innerHeight;
@@ -137,19 +141,24 @@ class Template {
     elemento.style.left = (larguraDocumento / 2) - 1024 / 2+'px';
     elemento.style.top = (alturaDocumento / 2) - 660 / 2+'px';
   };
+  adjustMobileScreen(){
+    let getOed = document.querySelector("#oed");
+    if(!getOed.classList.contains('mobile-service')){
+      getOed.style.removeProperty('transform');
+      getOed.style.removeProperty('left');
+      getOed.style.removeProperty('top');
+      getOed.classList.add('mobile-service');
+    }
+  };
   selectDevice(){
-    
-    if(navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/) ||
-      navigator.userAgent.match(/Windows Phone/i) ||
-      navigator.userAgent.match(/ZuneWP7/i)){
-      // ajusteMobile();
+    let deviceAgent = navigator.userAgent.toLowerCase();
+    let isTouchDevice = Modernizr.touch || (deviceAgent.match(/(iphone|ipod|ipad)/) || deviceAgent.match(/(android)/) || deviceAgent.match(/(iemobile)/) || deviceAgent.match(/iphone/i) || deviceAgent.match(/ipad/i) || deviceAgent.match(/ipod/i) || deviceAgent.match(/blackberry/i) || deviceAgent.match(/bada/i));
+
+    if(isTouchDevice){
+      this.adjustMobileScreen();
     }else{
       this.adjustLargerScreen();
-    }
+    };
   }  
 }
 
@@ -263,7 +272,7 @@ class Creditos {
     let autores = '';
       arrayCreditos.forEach(function(objeto) {
         for ( var chave in objeto )
-            autores += (chave +': '+objeto[chave]+'<br/>');
+            if(objeto[chave]) autores += ('<span class="titulo_credito">'+chave +': </span><span class="nome_autor">'+objeto[chave]+'</span>');
       });
     
     
@@ -363,4 +372,3 @@ class Navegacao {
   }
 }
 let app = new Template();
-
