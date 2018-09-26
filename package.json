@@ -1,0 +1,31 @@
+{
+  "name": "template-seriebrasil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel dev/dev-js/ -d dev/assets/js/ && gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thihille/template-seriebrasil.git"
+  },
+  "author": "Editora do Brasil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thihille/template-seriebrasil/issues"
+  },
+  "homepage": "https://github.com/thihille/template-seriebrasil#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-usemin": "^0.3.29"
+  }
+}
