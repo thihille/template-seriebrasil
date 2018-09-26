@@ -173,7 +173,7 @@ var Template = function () {
     key: 'selectDevice',
     value: function selectDevice() {
       var deviceAgent = navigator.userAgent.toLowerCase();
-      var isTouchDevice = Modernizr.touch || deviceAgent.match(/(iphone|ipod|ipad)/) || deviceAgent.match(/(android)/) || deviceAgent.match(/(iemobile)/) || deviceAgent.match(/iphone/i) || deviceAgent.match(/ipad/i) || deviceAgent.match(/ipod/i) || deviceAgent.match(/blackberry/i) || deviceAgent.match(/bada/i);
+      var isTouchDevice = Modernizr.touch || deviceAgent.match(/(iphone|ipod)/) || deviceAgent.match(/(android)/) || deviceAgent.match(/(iemobile)/) || deviceAgent.match(/iphone/i) || deviceAgent.match(/ipod/i) || deviceAgent.match(/blackberry/i) || deviceAgent.match(/bada/i);
 
       if (isTouchDevice) {
         this.adjustMobileScreen();
