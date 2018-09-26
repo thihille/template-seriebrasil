@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "babel dev/dev-js/ -d dev/assets/js/ && gulp default"
+    "compile": "gulp default && babel dist/assets/js/ -d dist/assets/js/ && gulp usemin"
   },
   "repository": {
     "type": "git",

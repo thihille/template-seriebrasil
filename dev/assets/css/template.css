@@ -78,7 +78,7 @@ body {
 #oed-ajuda .conteudo .conteudo-ajuda {
     display: block;
     height: 100%;
-    overflow: scroll hidden;
+    overflow: hidden auto;
 }
 #oed-creditos {
     width: 645px;
@@ -126,7 +126,7 @@ body {
 #oed-creditos .conteudo .conteudo-ajuda {
     display: block;
     height: 100%;
-    overflow: scroll hidden;
+    overflow: hidden auto;
 }
 #oed-creditos .conteudo .conteudo-ajuda p span.titulo_credito {
     display: block;
@@ -568,7 +568,7 @@ body {
     #oed.mobile-service #oed-creditos .conteudo .conteudo-ajuda {
         display: block;
         height: calc(100% - 50px);
-        overflow: scroll hidden;
+        overflow: hidden auto;
     }
     #oed.mobile-service #oed-creditos .conteudo-ajuda p {
         font-size: .8em;
@@ -642,7 +642,7 @@ body {
     #oed.mobile-service #oed-ajuda .conteudo .conteudo-ajuda {
         display: block;
         height: calc(100% - 50px);
-        overflow: scroll hidden;
+        overflow: hidden auto;
     }
     #oed.mobile-service #oed-ajuda .conteudo-ajuda p {
         font-size: .8em;

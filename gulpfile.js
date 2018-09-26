@@ -8,10 +8,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 gulp.task('default', ['copy'], function(){
-  gulp.start('build-img','usemin');
+  gulp.start('build-img');
 });
 gulp.task('copy',['clean'], function(){
-  return gulp.src(['dev/**/*','!dev/dev-js/**/*.js'])
+  return gulp.src(['dev/**/*'])
       .pipe(gulp.dest('dist/'))
 });
 gulp.task('clean',function(){
@@ -23,6 +23,8 @@ gulp.task('build-img', function(){
       .pipe(imagemin())
       .pipe(gulp.dest('dist/assets/img/'));
 });
+
+//Após a execução do Babel
 gulp.task('usemin', function(){
   gulp.src('dist/**/*.html')
     .pipe(usemin({
@@ -41,14 +43,4 @@ gulp.task('clean-js',function(){
     'dist/dev-js',
     'dist/assets/js/lib'
   ]).pipe(clean());
-});
-
-
-
-gulp.task('compress', function(){
-  return gulp.src(['./app/assets/js/creditos.js','./app/assets/js/config.js','./app/assets/js/app.js'])
-             .pipe(concat('template.min.js'))
-             .pipe(uglify())
-            //  .pipe(lzmajs(9))
-             .pipe(gulp.dest('dist'));
 });
