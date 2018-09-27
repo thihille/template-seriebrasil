@@ -78,6 +78,15 @@ class Template {
           ObjetoEducacional();
     }
     botaoStart.addEventListener('click',iniciaOed);
+    let startEnter = true;
+    addEventListener('keypress',(e)=> {
+      startEnter ? (
+        e.keyCode == 13 ? (
+            iniciaOed(),
+            startEnter = false
+          ) : ''
+        ) : '';
+    });
   }
   adjustLargerScreen() {
     let elemento = this._window;
