@@ -68,6 +68,7 @@ class Template {
     this._producao.appendChild(navOed);   
     this._producao.appendChild(tituloInterno);   
     
+    let startEnter = true;
     let iniciaOed = ()=>{
       let capa = document.querySelector("#capa");
           capa.classList.add("animated","zoomOutLeft");
@@ -78,6 +79,14 @@ class Template {
           ObjetoEducacional();
     }
     botaoStart.addEventListener('click',iniciaOed);
+    addEventListener('keypress',(e)=> {
+      startEnter ? (
+        e.keyCode == 13 ? (
+            iniciaOed(),
+            startEnter = false
+          ) : ''
+        ) : '';
+    });
   }
   adjustLargerScreen() {
     let elemento = this._window;
