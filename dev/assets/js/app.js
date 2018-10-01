@@ -1,10 +1,9 @@
 class Template {
-
   constructor(){
     //ConfigJS
     this._abertura = ConfigTemplate.abertura;
     this._caracterizado = ConfigTemplate.caracterizado;
-
+    
     //TemplateJS
     this._titulo = ConfigTemplate.titulo;
     this._creditosCapa = AutoresDaColecao;
@@ -56,6 +55,9 @@ class Template {
     titulo.innerHTML = this._titulo;
     tituloInterno.innerHTML = this._titulo;
 
+    let configCssWidthTitulo = titulo.textContent.length;
+
+    configCssWidthTitulo >= 20 ? titulo.classList.add('title-larger') : '';
     this._window.childNodes[1].appendChild(materia);
     materia.appendChild(tituloMateria);    
     materia.appendChild(subTituloMateria);
@@ -68,7 +70,6 @@ class Template {
     this._producao.appendChild(navOed);   
     this._producao.appendChild(tituloInterno);   
     
-    let startEnter = true;
     let iniciaOed = ()=>{
       let capa = document.querySelector("#capa");
           capa.classList.add("animated","zoomOutLeft");
@@ -79,6 +80,7 @@ class Template {
           ObjetoEducacional();
     }
     botaoStart.addEventListener('click',iniciaOed);
+    let startEnter = true;
     addEventListener('keypress',(e)=> {
       startEnter ? (
         e.keyCode == 13 ? (
@@ -168,7 +170,10 @@ class Template {
     }else{
       this.adjustLargerScreen();
     };
-  }  
+  }
+  editTitle(txt){
+    document.querySelectorAll('.titulo-oed')[1].innerHTML = txt; 
+  }
 }
 
 class Ajuda {
@@ -330,6 +335,9 @@ class Navegacao {
     this._navSlideProximo = document.createElement('div');
       this._navSlideProximo.setAttribute('class','nav-proximo');
       // this._navSlideProximo.innerHTML = "Próximo";
+    this._navRestart = document.createElement('div');
+      this._navRestart.setAttribute('class','nav-restart');
+      this._navRestart.innerHTML = "Reiniciar";
 
     this._navSlideAnteriorEnable = false;
     this._navSlideProximoEnable = true;
@@ -339,10 +347,11 @@ class Navegacao {
     this._nPages = 1;
 
     this._producao = document.querySelector('#nav-oed');
+    this._producaoMain = document.querySelector('#producao');
     this._disablePrev = false;
     this._disableNext = false;
     this.createNav();
-
+    this.showBtnRestart();
   }
   createNav(){
     this._producao.appendChild(this._navSlideAnterior);
@@ -364,13 +373,18 @@ class Navegacao {
           document.querySelectorAll('.janela-slide')[pagina_atual-1].style.display = 'block';
           if(!btnProximo.classList.contains('off')) document.querySelector('.nav-proximo').classList.remove('disable');
           if(pagina_atual == 1) document.querySelector('.nav-anterior').classList.add('disable');
+          if(pagina_atual == total_paginas){
+            document.querySelector('.nav-restart').classList.add('enable');
+          }else{
+            if(document.querySelector('.nav-restart').classList.contains('enable')){
+              document.querySelector('.nav-restart').classList.remove('enable');
+            }
+          }
         }
       }
     });
     
-    this._navSlideProximo.addEventListener('click',function(){
-      
-      
+    this._navSlideProximo.addEventListener('click',function(){      
       if(!btnProximo.classList.contains('disable')){
         if(pagina_atual < total_paginas){
           for(let x=0;x<total_paginas;x++){
@@ -378,9 +392,15 @@ class Navegacao {
           }
           document.querySelectorAll('.janela-slide')[pagina_atual].style.display = 'block';
           pagina_atual++;
-          
           if(!btnAnterior.classList.contains('off')) document.querySelector('.nav-anterior').classList.remove('disable');
-          if(pagina_atual == total_paginas) document.querySelector('.nav-proximo').classList.add('disable');
+          if(pagina_atual == total_paginas){
+            document.querySelector('.nav-proximo').classList.add('disable');
+            document.querySelector('.nav-restart').classList.add('enable');
+          }else{
+            if(document.querySelector('.nav-restart').classList.contains('enable')){
+              document.querySelector('.nav-restart').classList.remove('enable');
+            }
+          }
         }
       }
     });
@@ -396,6 +416,13 @@ class Navegacao {
   }
   habilitarProximo(){
     document.querySelector('.nav-proximo').classList.remove('disable','off');
+  }
+  showBtnRestart(){
+    this._producaoMain.appendChild(this._navRestart);
+    document.querySelector('.nav-restart').classList.add('disable');
+    document.querySelector('.nav-restart').addEventListener('click',function(){
+      window.location.reload();
+    });
   }
 }
 let app = new Template();

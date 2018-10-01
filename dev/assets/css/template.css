@@ -190,6 +190,24 @@ body {
     left: 210px;
     cursor: pointer;
 }
+#producao .nav-restart {
+    width: 176px;
+    height: 45px;
+    position: absolute;
+    font-family: 'BreeSerif-Regular';
+    font-size: 20px;
+    bottom: 10px;
+    right: 0;
+    color: white;
+    padding: 12px 0 0 40px;
+    background: url(../img/btn-restart.png) no-repeat center top;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform: translate(250px,0px);   
+}
+#producao .nav-restart.enable {
+    transform: translate(0px,0px);
+}
 #capa {
     display: block;
     width: 1024px;
@@ -250,11 +268,21 @@ body {
 }
 #capa .titulo-oed {
     font-family: 'BreeSerif-Regular';
-    font-size: 50px;
+    font-size: 46px;
     color: #fff;
     position: absolute;
     bottom: 130px;
     right: 178px;
+}
+#capa .titulo-oed.title-larger {
+    font-family: 'BreeSerif-Regular';
+    width: 520px;
+    height: 100px;
+    font-size: 38px;
+    color: #fff;
+    position: absolute;
+    bottom: 70px;
+    right: 60px;
 }
 #capa .autores-oed {
     font-family: 'BreeSerif-Regular';
@@ -335,7 +363,7 @@ body {
     ##Dispositivo = Tablets e Mobiles de baixa resolução (paisagem)
     ##Tela = B/w 481px to 767px
 */
-@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {}
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     #oed.mobile-service {
         position: absolute;
         left: 0;
@@ -383,6 +411,7 @@ body {
     #oed.mobile-service #oed-ajuda {
         display: none;
     }
+}
 /*
     ##Dispositivo = Para a maioria dos celulares (retrato)
     ##Tela = B/w 320px to 479px

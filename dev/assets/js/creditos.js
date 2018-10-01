@@ -1,30 +1,33 @@
 const MeusCreditos = [
   {
-    "Supervisão de arte, editoração e produção digital":"Adelaide Carolina Cerutti"
+    "Roteiro":"Angela Kim Arahata"
   },
   {
-    "Coordenação de produção digital":"Daniel Cilli"
+    "Edição":"Maria Cecilia Fernandes Vannucchi"
   },
   {
-    "Web design":"Max Salvado, Renato Oliveira e Thiago Hille"
+    "Assistente de edição":"Eloise Melero e Marilda Pessota"
   },
   {
-    "Assistência de design digital":"Ana Carolina Grignet"
+    "Supervisão de arte, editoração e produção digital":"------------"
   },
   {
-    "Assistência de arte":"Livia Danielli"
+    "Coordenação de de produção digital":"------------"
   },
   {
-    "Roteiro":""
+    "Web Design":"Renato Oliveira e Thiago Hille"
   },
   {
-    "Revisão":"Equipe Revisão"
+    "Assistência de design digital":"---------"
   },
   {
-    "Pesquisa iconográfica":""
+    "Assistência de arte":"------------"
   },
   {
-    "Controle de processos editoriais":"Equipe CPE"
+    "Revisão":"Elis Beletti e Sylmara Beletti"
+  },
+  {
+    "Pesquisa Iconográfica":"-----------"
   }
 ];
 const AutoresDaColecao = [
