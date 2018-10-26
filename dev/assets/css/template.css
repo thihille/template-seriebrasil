@@ -446,6 +446,16 @@ body {
     bottom: 130px;
     right: 178px;
 }
+#capa .titulo-oed.titulo-medio {
+    left: 48%;
+    right: 50px;
+    font-size: 43px;
+}
+#capa .titulo-oed.titulo-grande {
+    left: 50%;
+    right: 5%;
+    font-size: 35px;
+}
 #capa .titulo-oed.title-larger {
     font-family: 'BreeSerif-Regular';
     width: 520px;
@@ -691,6 +701,14 @@ body {
         font-size: 23px;
         color: #fff;
     }
+    #oed.mobile-service #capa .titulo-oed.titulo-medio {
+        left: 33%;
+        /* font-size: 21px; */
+    }
+    #oed.mobile-service #capa .titulo-oed.titulo-grande {
+        left: 33%;
+        font-size: 21px;
+    }
     #oed.mobile-service .titulo-oed-prod {
         font-family: 'BreeSerif-Regular';
         font-size: 18px;
@@ -702,6 +720,10 @@ body {
         background: url(../img/bg-titulo.png) no-repeat right center;
         margin: 0;
         background-size: 290%;
+    }
+    #oed.mobile-service .titulo-oed-prod.titulo-grande {
+        font-size: 12px;
+        padding: 10px 22px 13px 42px;
     }
     #oed.mobile-service .titulo-oed-prod::before {
         content: '';

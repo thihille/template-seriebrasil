@@ -8,6 +8,14 @@ class CapaView extends View {
     let infoOedAutores = model[1];
     let infoCreditos = model[2];
     let creditos = '';
+    let classTituloOed = ''
+    if(infoOed.titulo.length < 15){
+      classTituloOed = 'titulo-pequeno';
+    }else if(infoOed.titulo.length >= 16 && infoOed.titulo.length < 30){
+      classTituloOed = 'titulo-medio';
+    }else{
+      classTituloOed = 'titulo-grande';
+    };
     infoCreditos.forEach(function(o) {
       for ( var c in o )
           if(o[c]) creditos += ('<span class="titulo_credito">'+c +': </span><span class="nome_autor">'+o[c]+'</span>');
@@ -27,7 +35,7 @@ class CapaView extends View {
         `).join('')
         }
       </div>
-      <h1 class="titulo-oed">${infoOed.titulo}</h1>
+      <h1 class="titulo-oed ${classTituloOed}">${infoOed.titulo}</h1>
       <div class="btn-start-oed"></div>
       <div class="${infoOed.caracterizado ? 'logo-ebsa' : ''}"></div>
       <div class="${infoOed.caracterizado ? 'logo-colecao' : ''}"></div>
@@ -38,7 +46,7 @@ class CapaView extends View {
       <div class="nav-anterior disable"></div>
       <div class="nav-proximo"></div></div>
     </div>
-    <h1 class="titulo-oed-prod">${infoOed.titulo}</h1>
+    <h1 class="titulo-oed-prod ${classTituloOed}">${infoOed.titulo}</h1>
     <div class="nav-restart disable">Reiniciar</div>
     <div id="oed-creditos" class="creditos-oculto">
       <div class="btn-creditos"></div>
