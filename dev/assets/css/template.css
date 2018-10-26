@@ -4,6 +4,12 @@
 ::-moz-selection {
     background: rgba(0,0,0,0);
 }
+* {
+    -moz-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+}
 @font-face {
     font-family: 'BreeSerif-Regular';
     src: url('BreeSerif-Regular.eot?#iefix') format('embedded-opentype'),  url('BreeSerif-Regular.woff') format('woff'), url('BreeSerif-Regular.ttf')  format('truetype'), url('BreeSerif-Regular.svg#BreeSerif-Regular') format('svg');
