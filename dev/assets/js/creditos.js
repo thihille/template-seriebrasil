@@ -1,46 +1,67 @@
 const MeusCreditos = [
   {
+    "Direção-geral":"Vicente Tortamano Avanso"
+  },
+  {
+    "Direção editorial":"Felipe Ramos Poletti"
+  },
+  {
+    "Gerência editorial":"Erika Caldin"
+  },
+  {
+    "Supervisão de revisão":"Dora Helena Feres"
+  },
+  {
+    "Coordenação de revisão":"Otacilio Palareti"
+  },
+  {
+    "Supervisão de digital":"Ethel Shuña"
+  },
+  {
+    "Supervisão de iconografia":"Léo Burgos"
+  },
+  {
+    "Supervisão de controle de processos editoriais":"Marta Dias Portero"
+  },
+  {
+    "Supervisão editorial":"Selma Corrêa"
+  },
+  {
     "Roteiro":"Angela Kim Arahata"
   },
   {
-    "Edição":"Maria Cecilia Fernandes Vannucchi"
+    "Edição":"Camila Gutierrez"
   },
   {
     "Assistente de edição":"Eloise Melero e Marilda Pessota"
   },
   {
-    "Supervisão de arte, editoração e produção digital":"------------"
+    "Web design":"Renato Oliveira e Thiago Hille"
   },
   {
-    "Coordenação de de produção digital":"------------"
+    "Assistência de design digital":"Ana Carolina Grignet"
   },
   {
-    "Web Design":"Renato Oliveira e Thiago Hille"
+    "Assistência de arte":"Samira de Souza"
   },
   {
-    "Assistência de design digital":"---------"
+    "Revisão":"Equipe Ebsa"
   },
   {
-    "Assistência de arte":"------------"
-  },
-  {
-    "Revisão":"Elis Beletti e Sylmara Beletti"
-  },
-  {
-    "Pesquisa Iconográfica":"-----------"
+    "Pesquisa Iconográfica":"Elena Molinari"
   }
 ];
 const AutoresDaColecao = [
   {
-    nome: "Cibele Lopresti Costa (Coord.)"
+    nome: "Cibele Lopresti Costa"
   },
   {
-    nome: "Aline Evangelista Martins"
+    nome: "Cláudia Miranda"
   },
   {
-    nome: "Angela Kim Arahata"
+    nome: "Edson Munck Jr."
   },
   {
-    nome: "Elenice Rodrigues"
+    nome: "Jaciluz Dias"
   }
 ]

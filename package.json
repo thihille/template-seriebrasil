@@ -24,8 +24,10 @@
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-imagemin": "^4.1.0",
     "gulp-uglify": "^3.0.1",
     "gulp-usemin": "^0.3.29"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0"
   }
 }

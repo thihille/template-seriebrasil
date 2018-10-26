@@ -1,3 +1,9 @@
+::selection {
+    background: rgba(0,0,0,0);
+}
+::-moz-selection {
+    background: rgba(0,0,0,0);
+}
 @font-face {
     font-family: 'BreeSerif-Regular';
     src: url('BreeSerif-Regular.eot?#iefix') format('embedded-opentype'),  url('BreeSerif-Regular.woff') format('woff'), url('BreeSerif-Regular.ttf')  format('truetype'), url('BreeSerif-Regular.svg#BreeSerif-Regular') format('svg');
@@ -16,6 +22,34 @@ body {
     margin: 0;
     padding: 0;
 }
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #eaeaea;
+    background: -moz-radial-gradient(center, ellipse cover, #eaeaea 0%, #ffffff 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #eaeaea 0%,#ffffff 100%);
+    background: radial-gradient(ellipse at center, #eaeaea 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=1 );
+    background-size: 100%;
+}
+.preloader .loading {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../img/loader.gif) no-repeat center center;
+    background-size: 100%;
+}
 #oed {
     position: relative;
     overflow: hidden;
@@ -24,6 +58,99 @@ body {
     width: 1024px;
     height: 660px;
 }
+#oed #capa .abertura {
+    position: absolute;
+    z-index: 9999999;
+    width: 1024px;
+    height: 660px;
+    background: url(../img/abertura-animation.jpg) left center;
+    display: block
+}
+
+@keyframes playAbertura {
+    50% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    90% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    100% {
+        background-position: -31020px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes playAbertura {
+    50% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    90% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    100% {
+        background-position: -31020px;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes playAbertura {
+    50% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    90% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    100% {
+        background-position: -31020px;
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes playAbertura {
+    50% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    90% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    100% {
+        background-position: -31020px;
+        opacity: 0;
+    }
+}
+
+@-o-keyframes playAbertura {
+    50% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    90% {
+        background-position: -31020px;
+        opacity: 1;
+    }
+    100% {
+        background-position: -31020px;
+        opacity: 0;
+    }
+}
+
+.playAbertura {
+    animation: playAbertura 2s steps(30) both;
+    -webkit-animation: playAbertura 2s steps(30) both;
+    -moz-animation: playAbertura 2s steps(30) both;
+    -ms-animation: playAbertura 2s steps(30) both;
+    -o-animation: playAbertura 2s steps(30) both;
+    animation-delay: .3s;
+}
+
 #oed.mobile-service::before {
     content: '';
     display: none;    
@@ -123,16 +250,16 @@ body {
     font-size: 30px;
     margin-bottom: 16px;
 }
-#oed-creditos .conteudo .conteudo-ajuda {
+#oed-creditos .conteudo .conteudo-creditos {
     display: block;
     height: 100%;
     overflow: hidden auto;
 }
-#oed-creditos .conteudo .conteudo-ajuda p span.titulo_credito {
+#oed-creditos .conteudo .conteudo-creditos p span.titulo_credito {
     display: block;
     color: #666;
 }
-#oed-creditos .conteudo .conteudo-ajuda p span.nome_autor {
+#oed-creditos .conteudo .conteudo-creditos p span.nome_autor {
     display: block;
     margin: 5px 0 10px 0;
     color: #333;
@@ -190,7 +317,7 @@ body {
     left: 210px;
     cursor: pointer;
 }
-#producao .nav-restart {
+.nav-restart {
     width: 176px;
     height: 45px;
     position: absolute;
@@ -205,9 +332,48 @@ body {
     transition: all 1s ease;
     transform: translate(250px,0px);   
 }
-#producao .nav-restart.enable {
+.nav-restart.enable {
     transform: translate(0px,0px);
 }
+.press-button {
+    animation: anPressButton .1s ease both;
+    -webkit-animation: anPressButton .1s ease both;
+    -moz-animation: anPressButton .1s ease both;
+    -o-animation: anPressButton .1s ease both;
+}
+@keyframes anPressButton {
+    0% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(.9);
+    }
+}
+@-webkit-keyframes anPressButton {
+    0% {
+        -webkit-transform:scale(1);
+    }
+    100% {
+        -webkit-transform:scale(.9);
+    }
+}
+@-moz-keyframes anPressButton {
+    0% {
+        -moz-transform:scale(1);
+    }
+    100% {
+        -moz-transform:scale(.9);
+    }
+}
+@-o-keyframes anPressButton {
+    0% {
+        -o-transform:scale(1);
+    }
+    100% {
+        -o-transform:scale(.9);
+    }
+}
+
 #capa {
     display: block;
     width: 1024px;
@@ -290,7 +456,7 @@ body {
     color: #fff;
     position: absolute;
     bottom: 55%;
-    right: 12px;
+    right: 62px;
     transform: rotate(-16deg);
     line-height: 33px;
 }
@@ -303,7 +469,7 @@ body {
 #producao {
     display: block;
 }
-#producao .titulo-oed {
+.titulo-oed-prod {
     font-family: 'BreeSerif-Regular';
     font-size: 30px;
     color: #333;
@@ -313,8 +479,9 @@ body {
     padding: 10px 50px 17px 120px;
     background: url(../img/bg-titulo.png) no-repeat right center;
     margin: 0;
+    cursor: default;
 }
-#producao .titulo-oed::before {
+.titulo-oed-prod::before {
     content: '';
     position: absolute;
     top: -2px;
@@ -382,6 +549,7 @@ body {
         margin: auto;
         width: 35%;
         height: 20px;
+        z-index: 100;
         font-family: 'BreeSerif-Regular';
         text-align: center;
         display: block;
@@ -396,7 +564,7 @@ body {
         margin: auto;
         width: 100%;
         height: 100%;
-        background: url(../img/rotate-right.png) no-repeat center 40%;
+        background: white url(../img/rotate-right.png) no-repeat center 40%;
         display: block;
     }
     #oed.mobile-service #capa {
@@ -417,6 +585,21 @@ body {
     ##Tela = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    #oed #capa .abertura {
+        position: absolute;
+        z-index: 9999999;
+        width: 100%;
+        height: 100%;
+        background: #213a73 url(../img/abertura_mobile.png) no-repeat center center;
+        background-size: 50%;
+        display: block
+    }
+    .playAbertura {
+        animation: none;
+        -webkit-animation: none;
+        -ms-animation: none;
+        -o-animation: none;
+    }
     #oed.mobile-service  {
         position: absolute;
         left: 0;
@@ -502,6 +685,28 @@ body {
         font-size: 23px;
         color: #fff;
     }
+    #oed.mobile-service .titulo-oed-prod {
+        font-family: 'BreeSerif-Regular';
+        font-size: 18px;
+        color: #333;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 7px 22px 10px 50px;
+        background: url(../img/bg-titulo.png) no-repeat right center;
+        margin: 0;
+        background-size: 290%;
+    }
+    #oed.mobile-service .titulo-oed-prod::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 75px;
+        height: 52px;
+        background: url(../img/img-titulo.png) no-repeat left top;
+        background-size: 59%;
+    }
     #oed.mobile-service #capa .autores-oed {
         position: absolute;
         right: 8%;
@@ -528,28 +733,7 @@ body {
     #oed.mobile-service #producao {
         display: block;
     }
-    #oed.mobile-service #producao .titulo-oed {
-        font-family: 'BreeSerif-Regular';
-        font-size: 18px;
-        color: #333;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        padding: 7px 22px 10px 50px;
-        background: url(../img/bg-titulo.png) no-repeat right center;
-        margin: 0;
-        background-size: 290%;
-    }
-    #oed.mobile-service #producao .titulo-oed::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 0;
-        width: 75px;
-        height: 52px;
-        background: url(../img/img-titulo.png) no-repeat left top;
-        background-size: 59%;
-    }
+    
     #oed.mobile-service #oed-creditos {
         display: block;
         width: 85vw;
@@ -583,6 +767,24 @@ body {
         width: 90px;
         height: 90px;
         background-size: 100%;
+    }
+    .nav-restart {
+        width: 176px;
+        height: 45px;
+        position: absolute;
+        font-family: 'BreeSerif-Regular';
+        font-size: 20px;
+        bottom: 10px;
+        right: 0;
+        color: white;
+        padding: 12px 0 0 40px;
+        background: url(../img/btn-restart.png) no-repeat center top;
+        cursor: pointer;
+        transition: all 1s ease;
+        transform: translate(250px,-80px);   
+    }
+    .nav-restart.enable {
+        transform: translate(0px,-80px);
     }
     #oed.mobile-service #oed-creditos .conteudo {
         position: relative;

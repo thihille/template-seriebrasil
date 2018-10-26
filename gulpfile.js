@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
-    concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     usemin = require('gulp-usemin'),
     cssmin = require('gulp-cssmin'),
@@ -36,11 +35,11 @@ gulp.task('usemin', function(){
 });
 gulp.task('clean-js',function(){
   return gulp.src([
-    'dist/assets/css/*.css',
     '!dist/assets/css/template.min.css',
-    'dist/assets/js/*.js',
     '!dist/assets/js/template.min.js',
-    'dist/dev-js',
-    'dist/assets/js/lib'
+    'dist/assets/css/*.css',
+    'dist/assets/js/**/*.js',
+    'dist/assets/js/**',
+    '!dist/assets/js/'
   ]).pipe(clean());
 });
